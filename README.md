@@ -1,7 +1,7 @@
 # Java Samples
 
 ## Todo
-* Algorithms: Binary Tree, Heap Data
+* Algorithms: Heap
 * Study of Mocks, Fakes, Mockito, example
 * Stream data methods and calculation methods
 * Save results to a collection using the collect method and group/partition data using the Collectors class
@@ -44,5 +44,8 @@
   <dd>Usage in a value object to handle nulls, </dd>
   <dt>Algorithms</dt>
   <dd>Sorting</dd>
+  <dd>Binary Search Tree</dd>
+  <dd>LInear Search</dd>
+  <dd>Recursive Search</dd>
 </dl>
  
