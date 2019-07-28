@@ -1,4 +1,4 @@
-package com.test;
+package com.greatwideweb.samples.nio;
 
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
