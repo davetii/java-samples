@@ -4,7 +4,6 @@
 * Algorithms: Heap
 * Study of Mocks, Fakes, Mockito, example
 * Stream data methods and calculation methods
-
 * Use flatMap() methods in the Stream API
 * java 8 Date/Time
 * Lock, ReadWriteLock, and ReentrantLock
