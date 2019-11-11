@@ -4,7 +4,7 @@
 * Algorithms: Heap
 * Study of Mocks, Fakes, Mockito, example
 * Stream data methods and calculation methods
-* Save results to a collection using the collect method and group/partition data using the Collectors class
+
 * Use flatMap() methods in the Stream API
 * java 8 Date/Time
 * Lock, ReadWriteLock, and ReentrantLock
@@ -40,6 +40,8 @@
   <dd>Samples of sorting Streams, reversing and finding within a Stream, usage of peek</dd>
   <dt>Player Search</dt>
   <dd>Stream samples of min, max, noneMatch, allMatch, anyMatch and a method reference</dd>
+  <dt>Player Grouper</dt>
+  <dd>group/partition data using the Collectors class</dd>
   <dt>Optionals</dt>
   <dd>Usage in a value object to handle nulls, </dd>
   <dt>Algorithms</dt>
