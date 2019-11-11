@@ -1,7 +1,6 @@
 # Java Samples
 
 ## Todo
-* Algorithms: Heap
 * Study of Mocks, Fakes, Mockito, example
 * Stream data methods and calculation methods
 * Use flatMap() methods in the Stream API
@@ -9,9 +8,9 @@
 * Lock, ReadWriteLock, and ReentrantLock
 * Executor, ExecutorService, Executors, Callable, and Future
 * parallel Fork/Join Framework
-* Reflection
 * Security
 * Java Localization
+* Algorithms: Heap
 
 ## Completed
 <dl>
@@ -48,5 +47,7 @@
   <dd>Binary Search Tree</dd>
   <dd>LInear Search</dd>
   <dd>Recursive Search</dd>
+  <dt>Class Reflector</dt>
+  <dd>Experimenting with reflection</dd>
 </dl>
  
