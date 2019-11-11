@@ -40,7 +40,7 @@
   <dt>Player Search</dt>
   <dd>Stream samples of min, max, noneMatch, allMatch, anyMatch and a method reference</dd>
   <dt>Player Grouper</dt>
-  <dd>group/partition data using the Collectors class</dd>
+  <dd>group/partition data using the Collectors class, groupBy position, partition by years experience</dd>
   <dt>Optionals</dt>
   <dd>Usage in a value object to handle nulls, </dd>
   <dt>Algorithms</dt>
