@@ -65,4 +65,12 @@ public class Player {
                 ", seasons=" + seasons +
                 '}';
     }
+
+    public static Player buildPlayer(String name,  PlayerPosition position, int seasons) {
+        Player p = new Player();
+        p.setName(name);
+        p.setPosition(position.toString());
+        p.setSeasons(seasons);
+        return p;
+    }
 }
