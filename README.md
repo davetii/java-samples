@@ -11,6 +11,7 @@
 * Security
 * Java Localization
 * Algorithms: Heap
+* Design Patterns: Observer, Decorator, Factory, Common, Adaptor, Facade, Template, Builder, Template, Iterator,  Composite, State, Proxy, 
 
 ## Completed
 <dl>

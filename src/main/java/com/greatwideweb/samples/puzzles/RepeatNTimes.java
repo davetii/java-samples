@@ -1,4 +1,4 @@
-package com.greatwideweb.samples.leetcode;
+package com.greatwideweb.samples.puzzles;
 
 import java.util.HashSet;
 import java.util.Set;

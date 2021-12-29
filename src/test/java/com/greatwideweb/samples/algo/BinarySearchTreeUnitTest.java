@@ -18,6 +18,12 @@ public class BinarySearchTreeUnitTest {
     }
 
     @Test
+    public void ensureEmptyBinarySearchTreeInitCorrectly() {
+        BinarySearchTree newBinarySearchTree = new BinarySearchTree();
+        newBinarySearchTree.insert(0, "thing");
+    }
+
+    @Test
     public void ensureFindMaxReturnsExpected() {
         assertMax(40);
     }

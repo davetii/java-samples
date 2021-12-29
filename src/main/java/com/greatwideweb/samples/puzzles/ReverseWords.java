@@ -1,4 +1,4 @@
-package com.greatwideweb.samples.leetcode;
+package com.greatwideweb.samples.puzzles;
 
 public class ReverseWords {
 
