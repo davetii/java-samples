@@ -1,9 +1,11 @@
 package com.greatwideweb.samples.generics;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ContainerUnitTest {
 
@@ -13,7 +15,7 @@ public class ContainerUnitTest {
         c.add("Test 1");
         c.add(4);
         c.add(new HashMap<String, String>());
-        Assert.assertEquals(3, c.size());
+        assertEquals(3, c.size());
 
     }
 
@@ -22,6 +24,6 @@ public class ContainerUnitTest {
         Container<String> c = new Container<>();
         c.add("Test 1");
         c.add("Test 2");
-        Assert.assertEquals(2, c.size());
+        assertEquals(2, c.size());
     }
 }

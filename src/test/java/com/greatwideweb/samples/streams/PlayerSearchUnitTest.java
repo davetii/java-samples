@@ -1,8 +1,9 @@
 package com.greatwideweb.samples.streams;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +14,7 @@ public class PlayerSearchUnitTest {
     private PlayerSearch ps;
     private final List<Player> EMPTY_LIST = new ArrayList<>();
 
-    @Before
+    @BeforeEach
     public void setup() { ps = new PlayerSearch(); }
 
     @Test
@@ -36,18 +37,18 @@ public class PlayerSearchUnitTest {
 
     @Test
     public void ensureMaxScorerReturnsExpected() {
-        Assert.assertEquals(null, ps.getTopScorer(null));
-        Assert.assertEquals(null, ps.getTopScorer(EMPTY_LIST));
+        Assertions.assertEquals(null, ps.getTopScorer(null));
+        Assertions.assertEquals(null, ps.getTopScorer(EMPTY_LIST));
         List<Player> list = new ArrayList<>();
         list.add(createPlayerWithPoints(12, 2));
         list.add(createPlayerWithPoints(14, 2));
         list.add(createPlayerWithPoints(16, 2));
-        Assert.assertEquals(doubleToLongBits(8.0), doubleToLongBits(ps.getTopScorer(list).getPpg()));
-        Assert.assertEquals(doubleToLongBits(6.0), doubleToLongBits(ps.getLowScorer(list).getPpg()));
+        Assertions.assertEquals(doubleToLongBits(8.0), doubleToLongBits(ps.getTopScorer(list).getPpg()));
+        Assertions.assertEquals(doubleToLongBits(6.0), doubleToLongBits(ps.getLowScorer(list).getPpg()));
     }
 
     private void assertRookieTest(boolean expected, boolean actual) {
-        Assert.assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
     }
 
     private List<Player> createPlayerListWithSeasons(int... seasons) {

@@ -1,13 +1,13 @@
 package com.greatwideweb.samples.puzzles;
 
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class MinimumWindowUnitTest {
 
     @Test
     public void ensureMinWindow() {
         MinimumWindow w = new MinimumWindow();
-        //Assert.assertEquals("BANC", w.minWindows("ADOBECODEBANC", "ABC"));
+        //Assertions.assertEquals("BANC", w.minWindows("ADOBECODEBANC", "ABC"));
     }
 }

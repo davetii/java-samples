@@ -1,7 +1,10 @@
 package com.greatwideweb.samples.streams;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,19 +14,19 @@ public class TeamStatsCalculatorUnitTest {
     @Test
     public void ensureNullListIsHandled() {
         TeamStatsCalculator calculator = new TeamStatsCalculator(null);
-        Assert.assertTrue(calculator.calcPointPerGame() == 0);
+        assertTrue(calculator.calcPointPerGame() == 0);
     }
 
     @Test
     public void ensureEmptyListIsHandled() {
         TeamStatsCalculator calculator = new TeamStatsCalculator(new ArrayList<>());
-        Assert.assertTrue(calculator.calcPointPerGame() == 0);
+        assertTrue(calculator.calcPointPerGame() == 0);
     }
 
     @Test
     public void ensureTeamStatsCalculcatorReturnsExpectedForPOintsPerGame() {
         TeamStatsCalculator calculator = new TeamStatsCalculator(buildTeam());
-        Assert.assertTrue(calculator.calcPointPerGame() == 5.5);
+        assertTrue(calculator.calcPointPerGame() == 5.5);
     }
 
     @Test
@@ -31,8 +34,7 @@ public class TeamStatsCalculatorUnitTest {
         List<Player> players = new ArrayList<>();
         players.add(createPlayer("Reggie Jackson", 0, 8));
         TeamStatsCalculator calculator = new TeamStatsCalculator(players);
-        Assert.assertTrue(calculator.calcPointPerGame() == 0);
-
+        assertTrue(calculator.calcPointPerGame() == 0);
     }
 
     private List<Player> buildTeam() {

@@ -1,14 +1,14 @@
 package com.greatwideweb.samples.algo;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class BinarySearchTreeUnitTest {
 
     BinarySearchTree bst;
 
-    @Before
+    @BeforeEach
     public void setup() {
         bst = new BinarySearchTree();
         bst.insert(10, "Ten");
@@ -35,12 +35,12 @@ public class BinarySearchTreeUnitTest {
 
     @Test
     public void ensureRemoveNodeReturnsTrueWhenKeyIsRemoved() {
-        Assert.assertEquals(bst.remove(15), true);
+        Assertions.assertEquals(bst.remove(15), true);
     }
 
     @Test
     public void ensureRemoveNodeReturnsFalseWhenKeyIsNotFound() {
-        Assert.assertEquals(bst.remove(37), false);
+        Assertions.assertEquals(bst.remove(37), false);
     }
 
     @Test
@@ -56,11 +56,11 @@ public class BinarySearchTreeUnitTest {
     }
 
     private void assertMax(int expectedValue) {
-        Assert.assertEquals(bst.findMax().key, expectedValue);
+        Assertions.assertEquals(bst.findMax().key, expectedValue);
     }
 
     private void assertMin(int expectedValue) {
-        Assert.assertEquals(bst.findMin().key, expectedValue);
+        Assertions.assertEquals(bst.findMin().key, expectedValue);
     }
 }
 

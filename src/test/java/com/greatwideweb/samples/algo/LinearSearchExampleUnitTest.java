@@ -1,30 +1,30 @@
 package com.greatwideweb.samples.algo;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class LinearSearchExampleUnitTest {
 
     LinearSearchExample o;
     String [] list = {"bob", "andy", "caldwell"};
 
-    @Before
+    @BeforeEach
     public void before() {
         o = new LinearSearchExample();
     }
     @Test
     public void ensureSearchReturnsNegativeOneWhenNotFound() {
-        Assert.assertEquals(-1, o.itemAt(list, "joe") );
+        Assertions.assertEquals(-1, o.itemAt(list, "joe") );
     }
 
     @Test
     public void ensureSearchReturnsPostiveWhenFound() {
-        Assert.assertEquals(1, o.itemAt(list, "andy") );
+        Assertions.assertEquals(1, o.itemAt(list, "andy") );
     }
 
     @Test
     public void ensureSearchReturnsNegativeWhenInputIsNull() {
-        Assert.assertEquals(-1, o.itemAt(null, "andy") );
+        Assertions.assertEquals(-1, o.itemAt(null, "andy") );
     }
 }

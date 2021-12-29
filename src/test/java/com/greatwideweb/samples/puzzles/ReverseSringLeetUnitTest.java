@@ -1,20 +1,22 @@
 package com.greatwideweb.samples.puzzles;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ReverseSringLeetUnitTest {
 
 
     @Test
-    public void ensureGretaerSizereturnsREverse() {
+    public void ensureGreaterSizeReturnsReverse() {
         ReverseStringLeet o = new ReverseStringLeet();
-        Assert.assertEquals("gfedcba", o.reversString3("abcdefg", 10));
+        assertEquals("gfedcba", o.reversString3("abcdefg", 10));
     }
 
     @Test
     public void reverseString() {
         ReverseStringLeet o = new ReverseStringLeet();
-        Assert.assertEquals("bacdfeg", o.reversString3("abcdefg", 2));
+        assertEquals("bacdfeg", o.reversString3("abcdefg", 2));
     }
 }

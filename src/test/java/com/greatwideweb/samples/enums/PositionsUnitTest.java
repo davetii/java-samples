@@ -1,9 +1,10 @@
 package com.greatwideweb.samples.enums;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import static com.greatwideweb.samples.enums.Position.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PositionsUnitTest {
 
@@ -36,11 +37,11 @@ public class PositionsUnitTest {
     }
 
     private void assertEnum(int expectedId, Position position) {
-        Assert.assertEquals(expectedId, position.getId());
+        assertEquals(expectedId, position.getId());
     }
 
     private void assertAdjustedSpeed(int originalSpeed, int expectedSpeed, Position position) {
-        Assert.assertEquals(expectedSpeed, position.getAdjustedSpeed(originalSpeed));
+        assertEquals(expectedSpeed, position.getAdjustedSpeed(originalSpeed));
     }
 
 

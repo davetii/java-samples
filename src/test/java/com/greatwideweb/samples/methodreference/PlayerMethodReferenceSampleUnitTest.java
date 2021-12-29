@@ -1,12 +1,14 @@
 package com.greatwideweb.samples.methodreference;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static com.greatwideweb.samples.methodreference.PlayerMethodReferenceSample.buildDetailList;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PlayerMethodReferenceSampleUnitTest {
 
@@ -19,10 +21,10 @@ public class PlayerMethodReferenceSampleUnitTest {
         players.add(new PlayerMethodReferenceSample("Andre", "Drummond", "Center"));
 
         List<String> list = buildDetailList(players);
-        Assert.assertEquals(list.get(0), "Point Guard: Reggie Jackson");
-        Assert.assertEquals(list.get(1), "Big Guard: Avery Bradley");
-        Assert.assertEquals(list.get(2), "Combo Forward: Tobias Harris");
-        Assert.assertEquals(list.get(3), "Center: Andre Drummond");
+        assertEquals(list.get(0), "Point Guard: Reggie Jackson");
+        assertEquals(list.get(1), "Big Guard: Avery Bradley");
+        assertEquals(list.get(2), "Combo Forward: Tobias Harris");
+        assertEquals(list.get(3), "Center: Andre Drummond");
 
     }
 }

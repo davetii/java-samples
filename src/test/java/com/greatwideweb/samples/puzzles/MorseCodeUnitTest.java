@@ -1,20 +1,20 @@
 package com.greatwideweb.samples.puzzles;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class MorseCodeUnitTest {
 
     @Test
     public void ensureAValue() {
         MorseCode m = new MorseCode();
-        Assert.assertEquals(".-",  m.getA());
+        Assertions.assertEquals(".-",  m.getA());
     }
 
     @Test
     public void ensureuniqueMorseRepresentations() {
         MorseCode m = new MorseCode();
-        Assert.assertEquals(2,  m.uniqueMorseRepresentations("gin", "zen", "gig", "msg"));
+        Assertions.assertEquals(2,  m.uniqueMorseRepresentations("gin", "zen", "gig", "msg"));
 
     }
 

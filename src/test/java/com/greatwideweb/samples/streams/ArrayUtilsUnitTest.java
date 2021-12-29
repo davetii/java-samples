@@ -1,14 +1,14 @@
 package com.greatwideweb.samples.streams;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import java.util.*;
 
 public class ArrayUtilsUnitTest {
 
     @Test
     public void ensureDistinctReturnsDistinc() {
-        Assert.assertEquals(3, ArrayUtils.getDistinct(Arrays.asList(
+        Assertions.assertEquals(3, ArrayUtils.getDistinct(Arrays.asList(
                 "Bob", "Joe", "Gary", "Bob", "Joe")).size());
     }
 
@@ -23,7 +23,7 @@ public class ArrayUtilsUnitTest {
     }
 
     private void assertList(List<String> generatedList, List<String> expectedList, int i) {
-        Assert.assertEquals(generatedList.get(i), expectedList.get(i));
+        Assertions.assertEquals(generatedList.get(i), expectedList.get(i));
     }
 
     private List<String> buildExpectedResult() {

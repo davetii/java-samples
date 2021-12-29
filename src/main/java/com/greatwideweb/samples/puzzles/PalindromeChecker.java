@@ -2,12 +2,10 @@ package com.greatwideweb.samples.puzzles;
 
 public class PalindromeChecker {
 
-    public PalindromeChecker() {
-
-    }
-
-    public boolean isPalindrome(int i) {
+    public boolean isPalindrome(Integer i) {
+        if(i == null) { return false; }
         if(i < 0) { return false; }
+        if(Integer.toString(i).length() == 1) { return true; }
         int num = i;
         int reveresed = 0;
         while(num != 0) {

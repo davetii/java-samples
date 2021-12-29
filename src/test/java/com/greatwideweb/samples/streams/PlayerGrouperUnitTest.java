@@ -1,21 +1,23 @@
 package com.greatwideweb.samples.streams;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static com.greatwideweb.samples.streams.Player.*;
 import static com.greatwideweb.samples.streams.PlayerPosition.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PlayerGrouperUnitTest {
 
     List<Player> players;
     PlayerGrouper playerGrouper;
 
-    @Before
+    @BeforeEach
     public void setup() {
         players = buildPlayers();
         playerGrouper = new PlayerGrouper(players);
@@ -23,17 +25,17 @@ public class PlayerGrouperUnitTest {
 
     @Test
     public void ensureGetPositionsReturnsExpected() {
-        Assert.assertEquals(3, playerGrouper.getGuards().size());
+        assertEquals(3, playerGrouper.getGuards().size());
     }
 
     @Test
     public void ensureGetVeteransReturnsExpected() {
-        Assert.assertEquals(2, playerGrouper.getVeterans().size());
+        assertEquals(2, playerGrouper.getVeterans().size());
     }
 
     @Test
     public void ensureGetRookiesReturnsExpected() {
-        Assert.assertEquals(1, playerGrouper.getRookies().size());
+        assertEquals(1, playerGrouper.getRookies().size());
     }
 
     private List<Player> buildPlayers() {

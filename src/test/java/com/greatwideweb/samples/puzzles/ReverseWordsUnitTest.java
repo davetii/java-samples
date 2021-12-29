@@ -1,14 +1,14 @@
 package com.greatwideweb.samples.puzzles;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class ReverseWordsUnitTest {
 
     @Test
     public void ensureWordsAreReversed() {
         ReverseWords w = new ReverseWords();
-        Assert.assertEquals("s'teL ekat edoCteeL tsetnoc",
+        Assertions.assertEquals("s'teL ekat edoCteeL tsetnoc",
                 w.reverseWords2("Let's take LeetCode contest"));
     }
 

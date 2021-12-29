@@ -1,10 +1,13 @@
 package com.greatwideweb.samples.streams;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ForEachIsQualifiedSampleUnitTest {
 
@@ -22,7 +25,7 @@ public class ForEachIsQualifiedSampleUnitTest {
         for (IsQualifiedObject item : list) {
             if(item.isQualified()) { isQualifedCount++; }
         }
-        Assert.assertEquals(isQualifedCount, expectedIsQualifiedObjects);
+        assertEquals(isQualifedCount, expectedIsQualifiedObjects);
     }
 
     private List<IsQualifiedObject> buildIsQualiedObjects() {

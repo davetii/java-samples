@@ -1,38 +1,34 @@
 package com.greatwideweb.samples.puzzles;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class PalindromeCheckerTest {
 
-    PalindromeChecker checker;
-
-    @Before
-    public void setup() {
-        checker = new PalindromeChecker();
-    }
+    PalindromeChecker checker  = new PalindromeChecker();
 
     @Test
     public void ensureNegativeNumbersAreNotPalindrome() {
-        Assert.assertFalse(checker.isPalindrome(-1));
-    }
-
-    @Test
-    public void testGoodPalindrome() {
-        Assert.assertTrue(checker.isPalindrome(121));
-       // Assert.assertTrue(checker.isPalindrome(22));
+        assertFalse(checker.isPalindrome(-1));
     }
 
     @Test
     public void testWholeNumber() {
-        Assert.assertTrue(checker.isPalindrome(1));
+        assertEquals(true, checker.isPalindrome(1));
+    }
+
+
+    @Test
+    public void testGoodPalindrome() {
+        assertTrue(checker.isPalindrome(121));
     }
 
     @Test
     public void testNotPalindrome() {
-        Assert.assertFalse(checker.isPalindrome(122));
+        assertFalse(checker.isPalindrome(122));
     }
-
-
 }

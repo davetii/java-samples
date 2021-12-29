@@ -1,8 +1,8 @@
 package com.greatwideweb.samples.reflection;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -19,19 +19,19 @@ public class BaseClassReflectorUnitTest {
     String FINAL_GREETING_OBJECT_METHOD = "getFinalGreetingObject";
     String NEW_FIELD_VALUE = "I am a new field value";
 
-    @Before
+    @BeforeEach
     public void setup() {
         bcr = new BaseClassReflector();
     }
 
     @Test
     public void ensureConstructorNameReturnsExpected() {
-        Assert.assertEquals(bcr.getConstructorName(), "com.greatwideweb.samples.reflection.BaseClass");
+        Assertions.assertEquals(bcr.getConstructorName(), "com.greatwideweb.samples.reflection.BaseClass");
     }
 
     @Test
     public void ensureReflectionReturnsExpected() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
-        Assert.assertEquals(bcr.invokeMethod(GREETING_METHOD), ORIGINAL_VALUE);
+        Assertions.assertEquals(bcr.invokeMethod(GREETING_METHOD), ORIGINAL_VALUE);
     }
 
     @Test
@@ -51,13 +51,15 @@ public class BaseClassReflectorUnitTest {
         assertValues(FINAL_GREETING_OBJECT_METHOD, FINAL_GREETING_OBJECT, NEW_FIELD_VALUE, true, NEW_FIELD_VALUE);
     }
 
-    @Test(expected = IllegalAccessException.class)
+    @Test
     public void ensureGetOverideGreetingThrowsErrorWhenAccessNotAllowedReturnsExpected() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, NoSuchFieldException {
-        Assert.assertEquals(bcr.overrideFieldAndInvokeMethod(GREETING_METHOD, GREETING_FIELD, NEW_FIELD_VALUE, false), NEW_FIELD_VALUE);
+        Assertions.assertThrows(IllegalAccessException.class, () -> {
+            bcr.overrideFieldAndInvokeMethod(GREETING_METHOD, GREETING_FIELD, NEW_FIELD_VALUE, false);
+        });
     }
 
     private void assertValues(String method, String field, String newValue, boolean allowAccess, String expectedValue) throws InvocationTargetException, NoSuchMethodException, IllegalAccessException, NoSuchFieldException {
-        Assert.assertEquals(bcr.overrideFieldAndInvokeMethod(method, field, newValue, allowAccess), expectedValue);
+        Assertions.assertEquals(bcr.overrideFieldAndInvokeMethod(method, field, newValue, allowAccess), expectedValue);
     }
 
 
