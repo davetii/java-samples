@@ -26,19 +26,24 @@ public class RomanNumeralToInteger {
 
         int calc = 0;
 
-        for(int i=0; i< s.toCharArray().length;i++) {
-            int current = map.get(s.charAt(i));
-            int prev = 0;
-            if(i > 0) {
-                prev = map.get(s.charAt(( i -1)));
-            }
+        try {
+            for(int i=0; i< s.toCharArray().length;i++) {
+                int current = map.get(s.charAt(i));
+                int prev = 0;
+                if(i > 0) {
+                    prev = map.get(s.charAt(( i -1)));
+                }
 
-            if (prev < current) {
-                calc -= prev *2;
+                if (prev < current) {
+                    calc -= prev *2;
+                }
+                calc += current;
             }
-            calc += current;
+            return calc;
+        } catch(Exception e) {
+            return 0;
         }
-        return calc;
+
 
     }
 }
