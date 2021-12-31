@@ -9,7 +9,7 @@ public class BetweenTesterUnitTest {
 
     @Test
     public void ensureBetweenTestReturnsExpected(){
-        BetweenTester isBetween = new BetweenTester(2, 7);
+        Between2NumbersTester isBetween = new Between2NumbersTester(2, 7);
         assertTrue(isBetween.test(3));
         assertTrue(isBetween.test(4));
         assertTrue(isBetween.test(5));

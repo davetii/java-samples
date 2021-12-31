@@ -19,5 +19,16 @@ public class TestVO {
         tvo.setTestString(null);
         System.out.println("tvo: " + tvo.getTestString() );
         System.out.println("test: " + test );
+
+        String test2 = "I am another test";
+        tvo.setTestString(test2);
+
+        String test3  = test2;
+        test2 = null;
+
+        System.out.println("tvo: " + tvo.getTestString() );
+        System.out.println("test2: " + test2 );
+        System.out.println("test3: " + test3 );
+
     }
 }
