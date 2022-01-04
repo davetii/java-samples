@@ -15,15 +15,8 @@ public class ComplementOfBase10Integer {
 
     public int bitwiseComplement(int n) {
 
-        String s = Integer.toBinaryString(n);
-        StringBuilder newString = new StringBuilder();
-        for(int i=0; i< s.length(); i++) {
-            if(s.substring(i, i+1).equals("0")) {
-                newString.append("1");
-            } else {
-                newString.append("0");
-            }
-        }
-        return Integer.parseInt(newString.toString(), 2);
+        int invertedNumber = ~n;
+        int s3 = Integer.toBinaryString(invertedNumber).length();
+        return Integer.parseInt(Integer.toBinaryString(invertedNumber).substring(s3 - Integer.toBinaryString(n).length(), (s3 )), 2);
     }
 }
