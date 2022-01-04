@@ -14,7 +14,16 @@ Constraints:
 public class ComplementOfBase10Integer {
 
     public int bitwiseComplement(int n) {
-        String c = Integer.toBinaryString(n).replace("0", "y").replace("1", "z").replace("y", "1").replace("z", "0");
-        return Integer.parseInt(c, 2);
+
+        String s = Integer.toBinaryString(n);
+        StringBuilder newString = new StringBuilder();
+        for(int i=0; i< s.length(); i++) {
+            if(s.substring(i, i+1).equals("0")) {
+                newString.append("1");
+            } else {
+                newString.append("0");
+            }
+        }
+        return Integer.parseInt(newString.toString(), 2);
     }
 }
