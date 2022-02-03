@@ -1,21 +1,14 @@
 package com.greatwideweb.samples.collections;
 
-import java.util.Map;
-
 public class Node {
 
-    public Object data;
-    public Node next;
+    public final int key;
+    public final String value;
+    public Node leftChild, rightChild;
 
-    public void diplayNode() {
-        if(data instanceof String) {
-            System.out.println("data: " + data);
-        } else if(data instanceof Integer) {
-            System.out.println("data: " + data);
-        } else if(data instanceof Boolean) {
-            System.out.println("data: " + data);
-        }else if(data instanceof Map) {
-            System.out.println("data: " + data);
-        }
+    public Node(int key, String value) {
+        this.key = key;
+        this.value = value;
+
     }
 }

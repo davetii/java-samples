@@ -1,4 +1,4 @@
-package com.greatwideweb.samples.algo;
+package com.greatwideweb.samples.collections;
 
 public class BinarySearchTree {
 

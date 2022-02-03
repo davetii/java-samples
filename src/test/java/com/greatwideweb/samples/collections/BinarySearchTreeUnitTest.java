@@ -1,5 +1,6 @@
-package com.greatwideweb.samples.algo;
+package com.greatwideweb.samples.collections;
 
+import com.greatwideweb.samples.collections.BinarySearchTree;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
