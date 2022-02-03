@@ -25,7 +25,7 @@ public class SinglyLinkedList {
         System.out.println("first to last");
         SinglyNode current = first;
         while(current != null) {
-            current.diplayNode();
+            current.printData();
             current = current.next;
         }
         System.out.println("end of display list");

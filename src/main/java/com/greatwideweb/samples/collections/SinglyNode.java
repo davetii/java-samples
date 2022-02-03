@@ -7,7 +7,7 @@ public class SinglyNode {
     public Object data;
     public SinglyNode next;
 
-    public void diplayNode() {
+    public void printData() {
         if(data instanceof String) {
             System.out.println("data: " + data);
         } else if(data instanceof Integer) {
