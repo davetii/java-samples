@@ -1,8 +1,8 @@
 # Java Samples
 
 ## Todo
-* Add File Helpers
-* Study of Mocks, Fakes, Mockito, example
+* Add JSON conversion examples for JACKSON and GSON
+* Add examples of Mockito mocks and spies
 * Stream data methods and calculation methods
 * Use flatMap() methods in the Stream API
 * java 8 Date/Time
@@ -16,7 +16,7 @@
 
 ## Completed
 <dl>
-  <dt>enum fun</dt>
+  <dt>enum's</dt>
   <dd>Enum as a singleton, use enum with methods and extra values</dd>
   <dt>Player Sorter</dt><dd>Example of sorting when class implements compareTo and example when class does not (Comparator)</dd>
   <dt>Refactor music Folders</dt>
@@ -51,5 +51,8 @@
   <dd>Recursive Search</dd>
   <dt>Class Reflector</dt>
   <dd>Experimenting with reflection</dd>
+  <dt>File Helper</dt>
+  <dd>Read a file from the classpath</dd>
+  <dd>Stream a file in, provide a delimeter and convert each line to array of strings</dd>
 </dl>
  
