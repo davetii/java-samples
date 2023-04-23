@@ -25,11 +25,11 @@ public enum Position {
     public String getDescr() { return descr; }
 
     public int getAdjustedSpeed(int speed) {
-        if(this.id == 0) { return speed + 3; }
-        if(this.id == 1) { return speed + 2; }
-        if(this.id == 2) { return speed + 1; }
-        if(this.id == 7) { return speed - 1; }
-        if(this.id == 8) { return speed - 2; }
+        if(this == PG) { return speed + 3; }
+        if(this == CG) { return speed + 2; }
+        if(this == BG) { return speed + 1; }
+        if(this == FC) { return speed - 1; }
+        if(this == C) { return speed - 2; }
         return speed;
     }
 }
