@@ -1,6 +1,7 @@
 # Java Samples
 
 ## Todo
+* Add File Helpers
 * Study of Mocks, Fakes, Mockito, example
 * Stream data methods and calculation methods
 * Use flatMap() methods in the Stream API
