@@ -29,6 +29,7 @@ public class FileHelper {
         lines.forEach(s -> {
             result.add(s.split(delim));
         });
+        lines.close();
         return result;
     }
 }
