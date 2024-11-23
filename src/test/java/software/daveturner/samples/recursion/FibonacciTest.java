@@ -1,8 +1,9 @@
 package software.daveturner.samples.recursion;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class FibonacciTest {
 
@@ -15,36 +16,36 @@ public class FibonacciTest {
 
    @Test
    public void ensureFibonacci0Returns0() {
-       Assertions.assertEquals(0, fib.head(0));;
+       assertEquals(0, fib.fib(0));;
    }
 
     @Test
     public void ensureFibonacci1Returns1() {
-        Assertions.assertEquals(1, fib.head(1));;
+        assertEquals(1, fib.fib(1));;
     }
 
     @Test
     public void ensureFibonacci2Returns1() {
-        Assertions.assertEquals(1, fib.head(2));;
+        assertEquals(1, fib.fib(2));;
     }
 
     @Test
     public void ensureFibonacci3Returns3() {
-        Assertions.assertEquals(2, fib.head(3));;
+        assertEquals(2, fib.fib(3));;
     }
 
     @Test
     public void ensureFibonacci5Returns5() {
-        Assertions.assertEquals(5, fib.head(5));;
+        assertEquals(5, fib.fib(5));;
     }
 
     @Test
     public void ensureFibonacci6Returns8() {
-        Assertions.assertEquals(8, fib.head(6));;
+        assertEquals(8, fib.fib(6));;
     }
 
     @Test
     public void ensureFibonacci7Returns13() {
-        Assertions.assertEquals(13, fib.head(7));;
+        assertEquals(13, fib.fib(7));;
     }
 }

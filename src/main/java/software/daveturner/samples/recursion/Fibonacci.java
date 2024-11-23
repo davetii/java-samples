@@ -2,9 +2,9 @@ package software.daveturner.samples.recursion;
 
 public class Fibonacci {
 
-    public int head(int n) {
+    public int fib(int n) {
         if(n == 0) { return 0; }
         if(n == 1) { return 1; }
-        return head(n -1) +  head(n -2);
+        return fib(n -1) +  fib(n -2);
     }
 }
