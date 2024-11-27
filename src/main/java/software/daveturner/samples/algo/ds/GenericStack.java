@@ -1,4 +1,4 @@
-package software.daveturner.samples.algo;
+package software.daveturner.samples.algo.ds;
 
 import java.util.ArrayList;
 import java.util.EmptyStackException;
