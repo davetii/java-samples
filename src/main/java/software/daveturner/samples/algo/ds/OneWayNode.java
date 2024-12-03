@@ -39,15 +39,27 @@ public class OneWayNode {
         return size;
     }
 
-    public static OneWayNode insertBeforeNode(OneWayNode target, int data) {
+    public static OneWayNode insertAtHead(OneWayNode target, int data) {
         OneWayNode n = new OneWayNode(data);
         n.next = target;
         return n;
     }
 
-    public static void insertAfter(OneWayNode target, int data) {
-        OneWayNode n = new OneWayNode(data);
-        target.next = n;
+    public static OneWayNode insertAtIndex(OneWayNode head, int index, int data) {
+        OneWayNode newNode = new OneWayNode(data);
+        if(index ==0 ) {
+            newNode.next = head;
+            return newNode;
+        }
+        OneWayNode current = head;
+        int i=0;
+        while(current != null && i < (index -1)) {
+            current = current.next;
+            i++;
+        }
+        newNode.next = current.next;
+        current.next = newNode;
+        return head;
     }
 
     public static OneWayNode insertAtEnd(OneWayNode n, int data) {
@@ -65,6 +77,7 @@ public class OneWayNode {
     }
 
     public static int getIndexOf(OneWayNode n, int data) {
+
         int i=0;
         while(n != null) {
             if(n.data == data) {
