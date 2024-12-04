@@ -123,6 +123,15 @@ class OneWayNodeTest {
         assertEquals(2, getIndexOf(head, 3));
     }
 
+    @Test
+    public void ensureReverseReturnsExpected() {
+        head = OneWayNode.reverse(head);
+        assertEquals(size(head),3);
+        assertEquals(0, getIndexOf(head, 3));
+        assertEquals(1, getIndexOf(head, 2));
+        assertEquals(2, getIndexOf(head, 1));
+    }
+
 
 
 }

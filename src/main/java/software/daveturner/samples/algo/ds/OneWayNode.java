@@ -111,6 +111,20 @@ public class OneWayNode {
         return n;
     }
 
+
+    public static OneWayNode reverse(OneWayNode n) {
+        OneWayNode current = n;
+        OneWayNode prev = null;
+        OneWayNode next = null;
+        while(current != null) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        return prev;
+    }
+
     @Override
     public String toString() {
         return "SimpleNode{" +
