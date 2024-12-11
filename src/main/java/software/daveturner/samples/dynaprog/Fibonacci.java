@@ -29,7 +29,6 @@ public class Fibonacci {
     public int fibTab(int n) {
         tabCount++;
         int curr, prev, beforePrev = 0;
-        beforePrev = 0;
         prev = 1;
 
         for (int i =2; i < n +1; i++) {
