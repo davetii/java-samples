@@ -1,10 +1,11 @@
 package software.daveturner.samples.ds;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class BasicQueueTest {
 
@@ -26,32 +27,32 @@ class BasicQueueTest {
 
     @Test
     public void ensureSizeReturnsExpected() {
-        Assertions.assertEquals(6, list.size());
-        Assertions.assertEquals(list.size(), q.size());
+        assertEquals(6, list.size());
+        assertEquals(list.size(), q.size());
     }
 
     @Test
     public void ensurePeekReturnsExpected() {
-        Assertions.assertEquals(6, list.size());
-        Assertions.assertEquals(1, q.peek());
-        Assertions.assertEquals(6, list.size());
-        Assertions.assertEquals(6, q.size());
+        assertEquals(6, list.size());
+        assertEquals(1, q.peek());
+        assertEquals(6, list.size());
+        assertEquals(6, q.size());
     }
 
     @Test
     public void ensurePopReturnsExpected() {
-        Assertions.assertEquals(6, list.size());
-        Assertions.assertEquals(1, q.pop());
-        Assertions.assertEquals(2, q.peek());
-        Assertions.assertEquals(5, list.size());
+        assertEquals(6, list.size());
+        assertEquals(1, q.pop());
+        assertEquals(2, q.peek());
+        assertEquals(5, list.size());
     }
 
     @Test
     public void insertReturnsExpected() {
-        Assertions.assertEquals(6, list.size());
+        assertEquals(6, list.size());
         q.insert(20);
-        Assertions.assertEquals(7, list.size());
-        Assertions.assertEquals(7, q.size());
+        assertEquals(7, list.size());
+        assertEquals(7, q.size());
     }
 
 }
