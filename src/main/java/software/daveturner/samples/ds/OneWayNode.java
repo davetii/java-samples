@@ -1,4 +1,4 @@
-package software.daveturner.samples.algo.ds;
+package software.daveturner.samples.ds;
 
 public class OneWayNode {
     int data;

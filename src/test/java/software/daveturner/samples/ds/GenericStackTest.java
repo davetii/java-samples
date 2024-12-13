@@ -1,4 +1,4 @@
-package software.daveturner.samples.algo.ds;
+package software.daveturner.samples.ds;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -7,7 +7,7 @@ class GenericStackTest {
 
     @Test
     public void ensureNumberStackReturnsExpected() {
-        GenericStack<Integer> stack = new GenericStack<Integer>();
+        GenericStack<Integer> stack = new GenericStack<>();
         stack.push(1);
         stack.push(2);
         stack.push(3);

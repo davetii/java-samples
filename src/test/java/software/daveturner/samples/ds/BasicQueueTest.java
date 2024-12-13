@@ -1,4 +1,4 @@
-package software.daveturner.samples.algo.ds;
+package software.daveturner.samples.ds;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -6,13 +6,11 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class BasicQueueTest {
 
 
     ArrayList<Integer> list = new ArrayList<>();
-    BasicQueue q;
+    SimpleQueue<Integer> q;
 
     @BeforeEach
     public void setup() {
@@ -50,6 +48,7 @@ class BasicQueueTest {
 
     @Test
     public void insertReturnsExpected() {
+        Assertions.assertEquals(6, list.size());
         q.insert(20);
         Assertions.assertEquals(7, list.size());
         Assertions.assertEquals(7, q.size());

@@ -1,10 +1,10 @@
-package software.daveturner.samples.algo.ds;
+package software.daveturner.samples.ds;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static software.daveturner.samples.algo.ds.OneWayNode.*;
+import static software.daveturner.samples.ds.OneWayNode.*;
 
 class OneWayNodeTest {
 
