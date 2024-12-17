@@ -1,7 +1,8 @@
 package software.daveturner.samples.puzzles;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 class ValidParenthesesTest {
 
@@ -9,22 +10,22 @@ class ValidParenthesesTest {
 
     @Test
     public void ensureValidParenthesesHandlesNull() {
-        Assertions.assertFalse(vp.isValid(null));
-        Assertions.assertFalse(vp.isValid(""));
-        Assertions.assertFalse(vp.isValid("{"));
+        assertFalse(vp.isValid(null));
+        assertFalse(vp.isValid(""));
+        assertFalse(vp.isValid("{"));
     }
 
     @Test
     public void ensureBasicOpsReturnsTrue() {
-        Assertions.assertTrue(vp.isValid("{}"));
-        Assertions.assertFalse(vp.isValid("{]"));
+        assertTrue(vp.isValid("{}"));
+        assertFalse(vp.isValid("{]"));
     }
 
     @Test
     public void ensureNestedReturnsExpected() {
-        Assertions.assertTrue(vp.isValid("{()}"));
-        Assertions.assertTrue(vp.isValid("[{()}]"));
-        Assertions.assertTrue(vp.isValid("{[()()]}"));
+        assertTrue(vp.isValid("{()}"));
+        assertTrue(vp.isValid("[{()}]"));
+        assertTrue(vp.isValid("{[()()]}"));
     }
 
 
