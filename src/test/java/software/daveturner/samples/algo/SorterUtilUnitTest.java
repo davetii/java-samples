@@ -90,9 +90,7 @@ public class SorterUtilUnitTest {
     @Test
     void basicSort() {
         int[] result = new int[] {5,3,19,1,43,12,26};
-        System.out.println(Arrays.toString(result));
         SorterUtil.basicSort(result);
-        //System.out.println(Arrays.toString(result));
         assertEquals(1, result[0]);
         assertEquals(3, result[1]);
         assertEquals(5, result[2]);
