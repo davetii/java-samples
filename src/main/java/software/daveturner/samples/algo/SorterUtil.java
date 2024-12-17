@@ -2,10 +2,6 @@ package software.daveturner.samples.algo;
 
 public class SorterUtil {
 
-    private SorterUtil() { }
-
-    public static final SorterUtil SORTER_UTIL = new SorterUtil();
-
     public static void selectionSort(int[] a) {
         for(int i = 0; i < a.length; i++) {
             int min = i;
@@ -75,7 +71,7 @@ public class SorterUtil {
     }
 
     private static void merge(int[] a, int start, int mid, int end) {
-        int tmpAr[] = new int[end - start + 1];
+        int[] tmpAr = new int[end - start + 1];
         int leftSlot = start, rightSlot = mid+1, k=0;
         while(leftSlot <= mid && rightSlot <= end) {
             if(a[leftSlot] < a[rightSlot]) {
@@ -139,6 +135,18 @@ public class SorterUtil {
         a[small +1] = _b;
         a[high] = _a;
         return small +1;
+    }
+
+    public static void  basicSort(int[] a) {
+        for(int i =0; i < a.length; i++) {
+            if (i == a.length - 1) { break; }
+            if(a[i] < a[i + 1]) { continue; }
+            int curr = a[i];
+            int next = a[i+1];
+            a[i] = next;
+            a[i+1] = curr;
+            i = -1;
+        }
     }
 
 

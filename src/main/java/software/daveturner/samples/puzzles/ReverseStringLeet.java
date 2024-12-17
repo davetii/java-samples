@@ -14,7 +14,7 @@ public class ReverseStringLeet {
             return r.toString();
         }
 
-        List<String> allStrings = new ArrayList<String>();
+        List<String> allStrings = new ArrayList<>();
 
         String EMPTY_STRING = "";
         StringBuilder temp = new StringBuilder(EMPTY_STRING);
@@ -81,9 +81,7 @@ public class ReverseStringLeet {
                 for(j = i; j < i + k; j++) {
                     if(j < s.length()) { str.append(s.charAt(j)); }
                 }
-
                 isEven = true;
-
             }
         }
         return str.toString();
