@@ -108,7 +108,6 @@ public class SorterUtil {
     }
 
     public static void quickSort(int[] a, int low, int high) {
-
         if(low < high) {
             int pp = partition(a, low, high);
             quickSort(a, low, pp -1);
@@ -145,7 +144,7 @@ public class SorterUtil {
             int next = a[i+1];
             a[i] = next;
             a[i+1] = curr;
-            i = -1;
+            basicSort(a);
         }
     }
 
