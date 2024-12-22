@@ -31,30 +31,27 @@ public class SorterUtil {
     }
 
     public static void insertionSort(int[] a) {
-        for(int i =1; i < a.length; i++) {
+        for(int i =0; i < a.length; i++) {
 
-            int e = a[i];
-            int j = i -1;
-
-            while(j >= 0 && a[j] > e) {
-                a[j+1] = a[j];
-                j--;
+            int current = i;
+            while(current > 0 && a[current] < a[current-1]) {
+                int temp = a[current];
+                a[current] = a[current-1];
+                a[current-1] = temp;
+                current --;
             }
-            a[j+1] = e;
         }
     }
 
     public static void insertionSort(String[] a) {
-        for(int i =1; i < a.length; i++) {
-
-            String e = a[i];
-            int j = i -1;
-
-            while(j >= 0 && a[j].compareTo(e) > 0) {
-                a[j+1] = a[j];
-                j--;
+        for(int i =0; i < a.length; i++) {
+            int current = i;
+            while(current > 0 && a[current].compareTo(a[current-1]) < 0) {
+                String temp = a[current];
+                a[current] = a[current-1];
+                a[current-1] = temp;
+                current --;
             }
-            a[j+1] = e;
         }
     }
 
@@ -136,7 +133,26 @@ public class SorterUtil {
         return small +1;
     }
 
-    public static void  basicSort(int[] a) {
+    public static void  bubbleSort(int[] a) {
+        int maxIndex = a.length - 1;
+        for(int i =0; i < maxIndex; i++) {
+            boolean swapped = false;
+            for(int j = 0; j < maxIndex - i; j++) {
+                if (a[j] > a[j + 1]) {
+                    int tmp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = tmp;
+                    swapped = true;
+                }
+            }
+            if (!swapped) {
+                break;
+            }
+        }
+    }
+
+
+    public static void basicSort(int[] a) {
         for(int i =0; i < a.length; i++) {
             if (i == a.length - 1) { break; }
             if(a[i] < a[i + 1]) { continue; }

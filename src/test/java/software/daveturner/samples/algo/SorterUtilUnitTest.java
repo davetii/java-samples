@@ -2,8 +2,6 @@ package software.daveturner.samples.algo;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
 import static org.junit.jupiter.api.Assertions.*;
 import static software.daveturner.samples.algo.SorterUtil.*;
 
@@ -88,9 +86,9 @@ public class SorterUtilUnitTest {
     }
 
     @Test
-    void basicSort() {
+    void basicSortTest() {
         int[] result = new int[] {5,3,19,1,43,12,26};
-        SorterUtil.basicSort(result);
+        basicSort(result);
         assertEquals(1, result[0]);
         assertEquals(3, result[1]);
         assertEquals(5, result[2]);
@@ -98,6 +96,18 @@ public class SorterUtilUnitTest {
         assertEquals(19, result[4]);
         assertEquals(26, result[5]);
         assertEquals(43, result[6]);
+    }
 
+    @Test
+    void bubbleSortTest() {
+        int[] result = new int[] {5,3,19,1,43,12,26};
+        bubbleSort(result);
+        assertEquals(1, result[0]);
+        assertEquals(3, result[1]);
+        assertEquals(5, result[2]);
+        assertEquals(12, result[3]);
+        assertEquals(19, result[4]);
+        assertEquals(26, result[5]);
+        assertEquals(43, result[6]);
     }
 }
