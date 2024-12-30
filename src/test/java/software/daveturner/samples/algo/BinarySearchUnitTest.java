@@ -4,6 +4,13 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static software.daveturner.samples.algo.BinarySearch.*;
+
 public class BinarySearchUnitTest {
 
     BinarySearch b;
@@ -17,25 +24,52 @@ public class BinarySearchUnitTest {
 
     @Test
     public void ensureReturnsNegativeWhenValueGreaterThanRange() {
-        Assertions.assertEquals(-1, b.findIndex(numberList, 24));
-        Assertions.assertEquals(-1, b.findIndex(list, "Zero"));
+        assertEquals(-1, b.findIndex(numberList, 24));
+        assertEquals(-1, b.findIndex(list, "Zero"));
     }
 
     @Test
     public void ensureReturnsNegativeWhenValueInRangeButNotFound() {
-        Assertions.assertEquals(-1, b.findIndex(numberList, 6));
-        Assertions.assertEquals(-1, b.findIndex(list, "JOhnson"));
+        assertEquals(-1, b.findIndex(numberList, 6));
+        assertEquals(-1, b.findIndex(list, "JOhnson"));
     }
 
     @Test
     public void ensureReturnsNegativeWhenValueLessThanRangeButNotFound() {
-        Assertions.assertEquals(-1, b.findIndex(numberList, 0));
-        Assertions.assertEquals(-1, b.findIndex(list, "aa"));
+        assertEquals(-1, b.findIndex(numberList, 0));
+        assertEquals(-1, b.findIndex(list, "aa"));
     }
 
     @Test
     public void ensureReturnsIndexWhenValueFound() {
-        Assertions.assertEquals(4, b.findIndex(numberList, 9));
-        Assertions.assertEquals(4, b.findIndex(list, "Killingsworth"));
+        assertEquals(4, b.findIndex(numberList, 9));
+        assertEquals(4, b.findIndex(list, "Killingsworth"));
+    }
+
+    @Test
+    public void ensureSearchReturnsExpected() {
+        assertEquals(5, search(List.of(1,3,5,7,9, 12, 17), 12));
+    }
+
+    @Test
+    public void ensureFindFirstBooleanReturnsExpected() {
+        List<Boolean> bools = new ArrayList<>(List.of(true,true,true,false,false));
+        assertEquals(3, findFirstBoolean(bools, false));
+    }
+
+    @Test
+    public void ensureFindFirstGreaterValueReturnsExpected() {
+        assertEquals(4, findFirstGreaterValue(List.of(1,3,5,7,9, 12, 17), 8));
+        assertEquals(6, findFirstGreaterValue(List.of(1,3,5,7,9, 12, 17), 15));
+        assertEquals(2, findFirstGreaterValue(List.of(1,3,5,7,9, 12, 17), 3));
+        assertEquals(1, findFirstGreaterValue(List.of(1,3,5,7,9, 12, 17), 2));
+    }
+
+    @Test
+    public void ensureFindFirstOccurenceReturnsExpected() {
+        assertEquals(4, BinarySearch.findFirstOccurence(List.of(1,3,3,5,7,7,9, 12, 17), 7));
+        assertEquals(1, BinarySearch.findFirstOccurence(List.of(1,3,3,3,3,3,5,7,7,9, 12, 17), 3));
+        assertEquals(10, BinarySearch.findFirstOccurence(List.of(1,3,3,3,3,3,5,7,7,9, 12,12, 12, 12,  17), 12));
+
     }
 }
