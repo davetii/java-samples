@@ -68,24 +68,38 @@ public class BinarySearch {
         return boundaryIndex;
     }
 
+    public static int findMinRotated(List<Integer> ar) {
+        int left=0, right=ar.size()-1, maxSize = ar.size() - 1, boundaryIndex = -1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (ar.get(mid) <= ar.get(maxSize)) {
+                boundaryIndex = mid;
+                right = mid -1;
+            } else {
+                left = mid + 1;
+            }
+        }
+        return boundaryIndex;
+    }
+
     public int findIndex(int[] list, int v) {
-        int p=0, r = list.length -1;
-        while (p <= r) {
-            int q = (int)Math.floor((p + r) / 2);
-            if (v < list[q]) { r = q-1; }
-            else if (v > list[q]){ p = q+1; }
-            else return q;
+        int left=0, right = list.length -1;
+        while (left <= right) {
+            int mid = left + (right - left ) / 2;
+            if (list[mid] == v) { return mid; }
+            if (list[mid] > v) { right = mid-1; }
+            else {  left = mid+1;}
         }
         return -1;
     }
 
     public int findIndex(String[] list, String v) {
-        int p=0, r = list.length -1;
-        while (p <= r) {
-            int q = (int)Math.floor((p + r) / 2);
-            if (v.compareTo(list[q]) < 0) { r = q-1; }
-            else if (v.compareTo(list[q]) > 0){ p = q+1; }
-            else return q;
+        int right=0,left = list.length -1;
+        while (right <= left) {
+            int mid = left + (right - left) / 2;
+            if (v.compareTo(list[mid]) < 0) { left= mid-1; }
+            else if (v.compareTo(list[mid]) > 0){ right = mid+1; }
+            else return mid;
         }
         return -1;
     }

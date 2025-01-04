@@ -1,11 +1,9 @@
 package software.daveturner.samples.algo;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -67,9 +65,15 @@ public class BinarySearchUnitTest {
 
     @Test
     public void ensureFindFirstOccurenceReturnsExpected() {
-        assertEquals(4, BinarySearch.findFirstOccurence(List.of(1,3,3,5,7,7,9, 12, 17), 7));
-        assertEquals(1, BinarySearch.findFirstOccurence(List.of(1,3,3,3,3,3,5,7,7,9, 12, 17), 3));
-        assertEquals(10, BinarySearch.findFirstOccurence(List.of(1,3,3,3,3,3,5,7,7,9, 12,12, 12, 12,  17), 12));
+        assertEquals(4, findFirstOccurence(List.of(1,3,3,5,7,7,9, 12, 17), 7));
+        assertEquals(1, findFirstOccurence(List.of(1,3,3,3,3,3,5,7,7,9, 12, 17), 3));
+        assertEquals(10, findFirstOccurence(List.of(1,3,3,3,3,3,5,7,7,9, 12,12, 12, 12,  17), 12));
+    }
 
+    @Test
+    public void ensureFindMinRotatedReturnsExpected() {
+        assertEquals(0, findMinRotated(List.of(1,3,3,5,7,7,9, 12, 17)));
+        assertEquals(8, findMinRotated(List.of(2,3,3,5,7,7,9, 12, 1)));
+        assertEquals(2, findMinRotated(List.of(5,7,1, 2, 3)));
     }
 }
