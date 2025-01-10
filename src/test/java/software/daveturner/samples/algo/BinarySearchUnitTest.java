@@ -76,4 +76,11 @@ public class BinarySearchUnitTest {
         assertEquals(8, findMinRotated(List.of(2,3,3,5,7,7,9, 12, 1)));
         assertEquals(2, findMinRotated(List.of(5,7,1, 2, 3)));
     }
+
+    @Test
+    public void ensurefindPeakReturnsExpected() {
+        assertEquals(2, findPeak(List.of(1,2,3,2,1)));
+        assertEquals(4, findPeak(List.of(1,2,3,4,5,2,1)));
+        assertEquals(1, findPeak(List.of(1,6,5,2,1)));
+    }
 }

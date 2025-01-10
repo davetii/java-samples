@@ -4,18 +4,19 @@ import java.util.List;
 
 public class BinarySearch {
 
-    public static int search(List<Integer> ar, int target) {
-        int left=0; int right=ar.size()-1;
-        while (left <= right) {
-            int mid = left + (right - left) / 2;
-            if(ar.get(mid) == target) { return mid; }
-            if (ar.get(mid) < target) {
-                left = mid + 1;
-            } else {
-                right = mid -1;
-            }
+    public static int binSearch(List<Integer> ar, int target, int left, int right) {
+        if (left > right) { return -1; }
+        int mid = left + (right - left) / 2;
+        if (ar.get(mid) == target) { return mid; }
+        if (ar.get(mid) < target) {
+            return binSearch(ar, target, mid++, right);
+        } else {
+            return binSearch(ar, target, left, mid--);
         }
-        return -1;
+    }
+
+    public static int search(List<Integer> ar, int target) {
+        return binSearch(ar, target, 0, ar.size() -1);
     }
 
     public static int findFirstGreaterValue(List<Integer> ar, int target) {
@@ -73,6 +74,20 @@ public class BinarySearch {
         while (left <= right) {
             int mid = left + (right - left) / 2;
             if (ar.get(mid) <= ar.get(maxSize)) {
+                boundaryIndex = mid;
+                right = mid -1;
+            } else {
+                left = mid + 1;
+            }
+        }
+        return boundaryIndex;
+    }
+
+    public static int findPeak(List<Integer> ar) {
+        int left=0, right = ar.size() - 1, boundaryIndex = -1;
+        while(left <= right) {
+            int mid = left + (right - left) / 2;
+            if (ar.get(mid) > ar.get(mid + 1)) {
                 boundaryIndex = mid;
                 right = mid -1;
             } else {
